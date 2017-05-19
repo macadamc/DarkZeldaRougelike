@@ -239,6 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
   targetObj: {fileID: 1634974811937330}
+  skipZOrderUpdate: 0
   health: 0
   stats: {fileID: 11400000, guid: 9e3a11ff5d416c346863e8f18a0351bf, type: 2}
   skipDamageFlash: 0
@@ -380,7 +381,7 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1399110843
+  m_SortingLayerID: 1579976159
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 0794659168d3cca46a1e90938be5d814, type: 3}
   m_Color: {r: 0, g: 0, b: 0, a: 1}

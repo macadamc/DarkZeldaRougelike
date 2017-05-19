@@ -9,6 +9,7 @@ public class Destructable : ZOrderObject {
     public Stats stats;
 
     public bool skipDamageFlash;
+    bool flashing;
 
     public AudioClip hurtSfx;
     AudioSource audioSource;
@@ -17,14 +18,17 @@ public class Destructable : ZOrderObject {
 
     public void ModifyHealth(float changeInHealth)
     {
-        health += changeInHealth;
+        if (flashing)
+            return;
 
+        health += changeInHealth;
 
         if (changeInHealth < 0)
         {
             PlayHurtSFX();
             StartCoroutine(DamageFlash(2));
         }
+
     }
 
     public void CheckForDeath()
@@ -79,6 +83,7 @@ public class Destructable : ZOrderObject {
     {
         if(!skipDamageFlash)
         {
+            flashing = true;
             for (int i = 0; i < flashes; i++)
             {
                 rend.enabled = true;
@@ -87,7 +92,7 @@ public class Destructable : ZOrderObject {
                 yield return new WaitForSeconds(0.1f);
             }
         }
-
+        flashing = false;
         rend.enabled = true;
         CheckForDeath();
         yield return null;

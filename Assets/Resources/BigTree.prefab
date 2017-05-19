@@ -128,6 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rend: {fileID: 0}
   targetObj: {fileID: 0}
+  skipZOrderUpdate: 1
 --- !u!212 &212465202211696158
 SpriteRenderer:
   m_ObjectHideFlags: 1

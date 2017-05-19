@@ -7,6 +7,7 @@ public class ZOrderObject : MonoBehaviour {
     [HideInInspector]
     public SpriteRenderer rend;
     public GameObject targetObj;
+    public bool skipZOrderUpdate;
 
     // Use this for initialization
     public virtual void Start()
@@ -21,7 +22,7 @@ public class ZOrderObject : MonoBehaviour {
     // Update is called once per frame
     public virtual void Update()
     {
-        if (rend.isVisible)
+        if (rend.isVisible && !skipZOrderUpdate)
         {
             rend.sortingOrder = -(int)(transform.position.y*100);
         }

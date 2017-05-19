@@ -51,8 +51,8 @@ public class WoodSword : Weapon {
         if (e != null && e != entity)
         {
             GameManager.GM.pauseManager.StartCoroutine(GameManager.GM.pauseManager.HitPause(0.05f));
-            //e.AddKnockback((e.transform.position - entity.transform.position).normalized * itemData.knowckBack);
-            e.AddKnockback(entity.lookDir * itemData.knowckBack);
+            e.AddKnockback((e.transform.position - entity.transform.position).normalized * itemData.knowckBack);
+            //e.AddKnockback(entity.lookDir * itemData.knowckBack);
             e.StunLock(itemData.knowckBack / 20);   //should have stunlock value in weapon maybe
             e.ModifyHealth(-itemData.baseDamage);
             return;
