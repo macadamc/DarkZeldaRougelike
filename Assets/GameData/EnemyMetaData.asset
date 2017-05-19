@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9bb8ed6758abc64bb2cf7736ac5988e, type: 3}
+  m_Name: EnemyMetaData
+  m_EditorClassIdentifier: 
+  enemyMetaData:
+  - name: Fly2
+    firstLvl: 1
+    cost: 1
+    prefab: {fileID: 1779290085593354, guid: 2807161459978dd42886dd98708cc52a, type: 2}
+  - name: Spider
+    firstLvl: 1
+    cost: 5
+    prefab: {fileID: 1314549201245590, guid: fdb2cc097373fd6488ba3fea7f4a9cbf, type: 2}
+  keys:
+  - Fly2
+  - Spider
